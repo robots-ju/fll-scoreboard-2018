@@ -970,7 +970,7 @@
                             "handle": "penalties",
                             "type": "number",
                             "max": 6,
-                            "points": -5,
+                            "points": -3,
                             "images": [
                                 "penalties.jpg"
                             ]
