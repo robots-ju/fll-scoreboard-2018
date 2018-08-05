@@ -1,0 +1,27 @@
+$scoreboard-color-background: white !default;
+$scoreboard-color-shadow: rgba(black, 0.6) !default;
+$scoreboard-color-text-dark: #333 !default;
+$scoreboard-color-text-light: white !default;
+$scoreboard-color-text-grey: #ccc !default;
+
+$scoreboard-color-theme-red: #cb2128; // Red used in the Into Orbit table overview PDF
+$scoreboard-color-theme-orange: #f16518; // Orange used in the Into Orbit logo
+$scoreboard-color-theme-purple: #442b82; // Purple used in the Into Orbit logo
+$scoreboard-color-theme-yellow: #e7aa30; // Average yellow from Hydro Dynamics logo
+
+$scoreboard-color-overlay-mission-border: #efefef !default;
+$scoreboard-color-overlay-mission-active: $scoreboard-color-theme-red !default;
+
+$scoreboard-color-pointer-default: $scoreboard-color-theme-red  !default;
+$scoreboard-color-pointer-scoring: $scoreboard-color-theme-orange !default;
+$scoreboard-color-pointer-penalties: $scoreboard-color-theme-purple !default;
+
+$scoreboard-color-header-primary: $scoreboard-color-theme-red !default;
+$scoreboard-color-warning: rgba($scoreboard-color-theme-yellow, 0.9) !default;
+
+$scoreboard-image-path: './' !default;
+
+$scoreboard-overlay-width: 650px !default;
+
+$scoreboard-transition-overlay-open: 0.2s !default;
+$scoreboard-transition-mission-pointer: 0.2s !default;
