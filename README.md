@@ -27,7 +27,7 @@ yarn dev # also check `yarn watch` and `yarn production`, these are standard Lar
 
 ## Images copyrights
 
-The table overview image and the Hydro Dnaymics logo come from the official [Robot Game material](http://www.firstlegoleague.org/challenge).
+The table overview image and the Into Orbit logo come from the official [Robot Game material](http://www.firstlegoleague.org/challenge).
 Both images were resized and compressed to a more suitable size.
 
 The missions illustrations displayed with each task come from the [Missions overview page](https://www.first-lego-league.org/en/season/robot-game/missions.html) on the FLL Europe website by HANDS on TECHNOLOGY.
