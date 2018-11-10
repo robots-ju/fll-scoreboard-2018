@@ -38,7 +38,7 @@ Thanks for making them, they are great !
 Applies to all mission strings in `missions.json`.
 
 - The English rules are copied from the Hands on Technology [Missions overview page](https://www.first-lego-league.org/en/season/robot-game/missions.html).
-- The French rules are copied from the PDF hosted on the EPFL [FLL rules page](http://sps.epfl.ch/fll-regles).
+- The French rules are copied from the PDF hosted on the EPFL [FLL rules page](https://sps.epfl.ch/jeunepublic/fll-2/fll-regles/).
 
 ## Code license
 
