@@ -1,6 +1,7 @@
 import m from 'mithril';
 import Scoreboard from './Scoreboard';
 import FllScorer from 'robots-ju-fll-robotgame-scorer-2018';
+import {decodeHash, encodeHash} from '../helpers/decodeNumericHash';
 
 export default {
     oninit(vnode) {
@@ -9,7 +10,15 @@ export default {
 
         if (window.location.hash) {
             try {
-                const initialMissionsState = JSON.parse(decodeURIComponent(window.location.hash.substring(1)));
+                const hash = window.location.hash.substring(1);
+
+                let initialMissionsState;
+
+                if (hash.match(/^[0-6]{33}$/)) {
+                    initialMissionsState = decodeHash(hash);
+                } else {
+                    initialMissionsState = JSON.parse(decodeURIComponent(hash));
+                }
 
                 for (let attr in initialMissionsState) {
                     if (initialMissionsState.hasOwnProperty(attr) && vnode.state.missions.hasOwnProperty(attr)) {
@@ -22,6 +31,18 @@ export default {
         }
     },
     view(vnode) {
+        const missionHash = '#' + encodeHash(vnode.state.missions);
+
+        if (missionHash === '#000000000000000000000000000000000') {
+            if (window.location.hash) {
+                window.location.hash = '';
+            }
+        } else {
+            if (missionHash !== window.location.hash) {
+                window.location.hash = missionHash;
+            }
+        }
+
         return m(Scoreboard, {
             missions: vnode.state.missions,
         });

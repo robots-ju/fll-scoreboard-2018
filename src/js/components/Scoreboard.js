@@ -7,6 +7,7 @@ import OverlayMission from './OverlayMission';
 import FllScorer from 'robots-ju-fll-robotgame-scorer-2018';
 import lang from '../helpers/lang';
 import Configuration from '../utils/Configuration';
+import {encodeHash} from '../helpers/decodeNumericHash';
 
 export default {
     oninit(vnode) {
@@ -134,8 +135,9 @@ export default {
                 m('p', trans(data.strings.about)),
                 m('p', m('a.btn.twitter.big', {
                     href: (() => {
+                        const hash = encodeHash(missions);
                         const text = trans(data.strings.twitter.text).replace('%score%', score);
-                        const link = 'https://fll-scoreboard-2018.robots-ju.ch/';
+                        const link = 'https://fll-scoreboard-2018.robots-ju.ch/' + (hash === '000000000000000000000000000000000' ? '' : '#' + hash);
 
                         // Based on the output seen here https://about.twitter.com/fr/resources/buttons#tweet
                         return 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(link);
